@@ -1,27 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mykytatishkin/Documents/GitHub/iShop/iShop/iShop.csproj": {}
+    "C:\\Users\\Mykyta\\Documents\\GitHub\\iShop\\iShop\\iShop.csproj": {}
   },
   "projects": {
-    "/Users/mykytatishkin/Documents/GitHub/iShop/iShop/iShop.csproj": {
+    "C:\\Users\\Mykyta\\Documents\\GitHub\\iShop\\iShop\\iShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mykytatishkin/Documents/GitHub/iShop/iShop/iShop.csproj",
+        "projectUniqueName": "C:\\Users\\Mykyta\\Documents\\GitHub\\iShop\\iShop\\iShop.csproj",
         "projectName": "iShop",
-        "projectPath": "/Users/mykytatishkin/Documents/GitHub/iShop/iShop/iShop.csproj",
-        "packagesPath": "/Users/mykytatishkin/.nuget/packages/",
-        "outputPath": "/Users/mykytatishkin/Documents/GitHub/iShop/iShop/obj/",
+        "projectPath": "C:\\Users\\Mykyta\\Documents\\GitHub\\iShop\\iShop\\iShop.csproj",
+        "packagesPath": "C:\\Users\\Mykyta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mykyta\\Documents\\GitHub\\iShop\\iShop\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/mykytatishkin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Mykyta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
-          "/usr/local/share/dotnet/sdk/7.0.308/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
