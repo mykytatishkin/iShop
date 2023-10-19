@@ -1,0 +1,30 @@
+[
+{
+        "Id": 0,
+        "Name": "Системний блок 2E Complex (2E-2614)",
+        "CategoryId": 4,
+        "Description": "Стандаотна комплектація",
+        "Count": 2,
+        "PriceIn": 10000,
+        "PriceOut": 14000
+},
+{
+        "Id": 0,
+        "Name": "Ігровий комп’ютер VERSUM Galaxy I v2.0",
+        "CategoryId": 4,
+        "Description": "Процесор Ryzen 3 1200, Кулер AMD Wraith Stealth, Оперативна пам’ять 16Gb (2x8) DDR4 3200MHz Viper Elite II Red Patriot, Відеокарта GTX1650 4GB Gigabyte 6",
+        "Count": 4,
+        "PriceIn": 17000,
+        "PriceOut": 25000
+},
+{
+        "Id": 0,
+        "Name": "Ігровий комп’ютер VERSUM Crusader v2.1",
+        "CategoryId": 4,
+        "Description": "Процесор Ryzen 3 1200, Кулер AMD Wraith Stealth, Оперативна пам’ять 8Gb (2x8) DDR4 3200MHz Viper Elite II Red Patriot, Відеокарта RX550 4GB",
+        "Count": 4,
+        "PriceIn": 13000,
+        "PriceOut": 19000
+}
+
+]

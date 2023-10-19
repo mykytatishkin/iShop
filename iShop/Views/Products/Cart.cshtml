@@ -1,0 +1,87 @@
+﻿@model IEnumerable<iShop.Models.CartViewModel>
+
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Cart</h3>
+
+<p>
+    Created by user: @ViewBag.Email
+</p>
+@{
+    int total = 0;
+}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cart.ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cart.Count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cart.PriceOut)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            
+            total += item.TotalCost;
+            
+            <tr>
+                <td>
+                @Html.DisplayFor(modelItem => item.Cart.ProductId)
+            </td>
+            <td>
+                    <input type="number" name="Count" value="@item.Cart.Count" min="0" onchange="changeCount(event,@item.Cart.Id)" max="@item.MaxCount" size="5" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cart.PriceOut)
+            </td>
+            <td>
+                    <a asp-action="ChangeCount" asp-route-id="@item.Cart.Id" asp-route-count="@item.Cart.Count" class="btn btn-warning btn-sm">Change Count</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div class="d-flex">
+    <div class="left col-md-6 col-lg-6 col-sm-6 d-flex">
+        <p class="text text-danger">
+            Total cost: <span id="total">@total</span>
+        </p>
+    </div>
+    <div class="right col-md-6 col-lg-6 col-sm-6 justify-content-center">
+        <a asp-action="Buy" class="btn btn-success">Buy</a>
+    </div>
+</div>
+
+
+<script>
+    function changeCount(event, id){
+        var newCount = event.target.value;
+        var url = "ChangeCount/?id=" + id + "&count=" + newCount;
+        var ao = new XMLHttpRequest();
+        ao.open("get", url, true);
+        ao.onreadystatechange = function(){
+            if( ao.readyState == 4 && ao.status == 200 ){
+                console.log(ao.responseText);
+                var res = string_between_strings('<span id="total">', '</span>', ao.responseText);
+                document.getElementById("total").innerHTML = '';
+                document.getElementById("total").innerHTML = res;
+            }
+        }
+        ao.send();
+    }
+
+    function string_between_strings(startStr, endStr, str) {
+        pos = str.indexOf(startStr) + startStr.length;
+        return str.substring(pos, str.indexOf(endStr, pos));
+    }
+
+</script>
